@@ -1,4 +1,9 @@
 {
+    files = {
+        "build/.objs/gb28281/linux/x86_64/release/domain/sipGbPaly.cpp.o",
+        "build/.objs/gb28281/linux/x86_64/release/main/main.cpp.o",
+        "build/.objs/gb28281/linux/x86_64/release/application/sip.cpp.o"
+    },
     values = {
         "/usr/bin/g++",
         {
@@ -29,10 +34,5 @@
             "-lpthread",
             "-no-pie"
         }
-    },
-    files = {
-        "build/.objs/gb28281/linux/x86_64/release/domain/sipGbPaly.cpp.o",
-        "build/.objs/gb28281/linux/x86_64/release/main/main.cpp.o",
-        "build/.objs/gb28281/linux/x86_64/release/application/sip.cpp.o"
     }
 }
