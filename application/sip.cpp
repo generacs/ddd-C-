@@ -88,7 +88,7 @@ bool SipCore::InitSip(int sipPort)
             std::cout<<"init pjlib util faild,code:"<<status;
             break;
         }
-        
+
         pj_caching_pool_init(&m_cachingPool,NULL,10086);
 
         status = pjsip_endpt_create(&m_cachingPool.factory,NULL,&m_endpt);
@@ -163,6 +163,7 @@ bool SipCore::InitSip(int sipPort)
 
         pj_thread_t* eventThread = NULL;
         status = pj_thread_create(m_pool,NULL,&pollingEvent,m_endpt,0,0,&eventThread);
+        
         if(PJ_SUCCESS != status)
         {
             std::cout<<"create pjsip thread faild,code:"<<status;
