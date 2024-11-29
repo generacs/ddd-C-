@@ -2,7 +2,9 @@
     files = {
         "build/.objs/gb28281/linux/x86_64/release/domain/sipGbPaly.cpp.o",
         "build/.objs/gb28281/linux/x86_64/release/main/main.cpp.o",
-        "build/.objs/gb28281/linux/x86_64/release/application/sip.cpp.o"
+        "build/.objs/gb28281/linux/x86_64/release/application/sipLocalConfig.cpp.o",
+        "build/.objs/gb28281/linux/x86_64/release/application/sip.cpp.o",
+        "build/.objs/gb28281/linux/x86_64/release/common/confReader.cpp.o"
     },
     values = {
         "/usr/bin/g++",
@@ -31,6 +33,8 @@
             "-lpj-x86_64-unknown-linux-gnu",
             "-lpjsdp-x86_64-unknown-linux-gnu",
             "-lasound",
+            "-lglog",
+            "-lgflags",
             "-lpthread",
             "-no-pie"
         }

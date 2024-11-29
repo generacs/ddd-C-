@@ -12,7 +12,8 @@
             "-I3rd/include/pjsip",
             "-Iapplication",
             "-Icommon",
-            "-Idomain"
+            "-Idomain",
+            "-I3rd/include"
         }
     }
 }
