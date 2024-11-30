@@ -1,7 +1,31 @@
 // 首先创建一个sip服务，用于通信， 使用pjsip库
 #pragma once
 #include <pjsipCommon.h>
+#include <SipTaskBase.h>
 
+typedef struct _threadParam
+{
+    _threadParam()
+    {
+        base = NULL;
+        data = NULL;
+    }
+    ~_threadParam()
+    {
+        if(base)
+        {
+            delete base;
+            base = NULL;
+        }
+        if(data)
+        {
+            pjsip_rx_data_free_cloned(data);
+            base = NULL;
+        }
+    }
+    SipTaskBase* base;
+    pjsip_rx_data* data;
+}threadParam;
 
 
 

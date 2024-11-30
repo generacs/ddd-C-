@@ -15,8 +15,8 @@ elselib = { "glog", "gflags"
 
 }
 
-programcpp = {"./domain/*.cpp", "./main/*.cpp","./application/*.cpp", "./common/*.cpp"}
-programhpp = {"./3rd/include/pjsip/","./application/", "./common/", "./domain/", "./3rd/include/"}
+programcpp = {"./domain/*.cpp", "./main/*.cpp","./application/*.cpp", "./common/*.cpp", "./adapter/*.cpp"}
+programhpp = {"./3rd/include/pjsip/","./application/", "./common/", "./domain/", "./3rd/include/", "./adapter/"}
 
 
 target("gb28281")

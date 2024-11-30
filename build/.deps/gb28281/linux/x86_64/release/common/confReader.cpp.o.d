@@ -1,4 +1,6 @@
 {
+    depfiles_gcc = "confReader.o: common/confReader.cpp common/confReader.h\
+",
     files = {
         "common/confReader.cpp"
     },
@@ -11,9 +13,8 @@
             "-Iapplication",
             "-Icommon",
             "-Idomain",
-            "-I3rd/include"
+            "-I3rd/include",
+            "-Iadapter"
         }
-    },
-    depfiles_gcc = "confReader.o: common/confReader.cpp common/confReader.h\
-"
+    }
 }
