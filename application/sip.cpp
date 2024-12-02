@@ -5,7 +5,9 @@
 #include <thread>
 #include <globalCtl.h>
 #include <sipRegister.h>
+#include <sipHeartBeat.h>
 #include <future>
+
 
 using namespace std;
 
@@ -44,7 +46,7 @@ static void taskStart(std::shared_ptr<SipTaskBase> base, pjsip_rx_data *rdata){
     return;
 }
 
-
+//使用工厂模式隔离变化 TODO
 pj_bool_t onRxRequest(pjsip_rx_data *rdata){
     if(NULL == rdata || NULL == rdata->msg_info.msg)
     {
@@ -56,8 +58,16 @@ pj_bool_t onRxRequest(pjsip_rx_data *rdata){
 
     if(msg->line.req.method.id == PJSIP_REGISTER_METHOD){
         taskStart(std::make_shared<SipRegister>(),rdata);
+    }else if(msg->line.req.method.id == PJSIP_OTHER_METHOD){
+        string rootType = "",cmdType = "CmdType",cmdValue;
+        tinyxml2::XMLElement* root = SipTaskBase::parseXmlData(msg,rootType,cmdType,cmdValue);
+        LOG(INFO)<<"rootType:"<<rootType;
+        LOG(INFO)<<"cmdValue:"<<cmdValue;
+        if(rootType == SIP_NOTIFY && cmdValue == SIP_HEARTBEAT)
+        {
+            taskStart(std::make_shared<SipHeartBeat>(),rdata);
+        }
     }
-
 
     return PJ_SUCCESS;
 }
@@ -117,6 +127,7 @@ void* SipCore::dealTaskThread(void* arg)
     return nullptr;
 }
 
+//接口层初始化
 bool SipCore::InitSip(int sipPort)
 {
     pj_status_t status;

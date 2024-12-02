@@ -14,6 +14,7 @@
 #include <semaphore.h>
 #include <memory>
 #include <sstream>
+#include <sys/sysinfo.h>
 using namespace std;
 
 #define LOG_DIR "/mnt/hgfs/share/log"
