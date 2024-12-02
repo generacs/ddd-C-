@@ -5,6 +5,7 @@
 #include <thread>
 #include <globalCtl.h>
 #include <sipRegister.h>
+#include <future>
 
 using namespace std;
 
@@ -28,6 +29,20 @@ static int pollingEvent(void* arg){
 //应用层处理入口，处理接受响应
 //首先使用多线程的方式
 //还可以使用消息队列......
+//使用C++11std::async进行测试
+
+static void taskStart(std::shared_ptr<SipTaskBase> base, pjsip_rx_data *rdata){
+    if(!base)
+    {
+        return;
+    }
+    std::async(std::launch::async, [&](){
+        pj_thread_desc desc;
+        pjcall_thread_register(desc);
+        base->run(rdata);
+    });
+    return;
+}
 
 
 pj_bool_t onRxRequest(pjsip_rx_data *rdata){
@@ -35,30 +50,14 @@ pj_bool_t onRxRequest(pjsip_rx_data *rdata){
     {
         return PJ_FALSE;
     }
-    threadParam* param = new threadParam();
-    pjsip_rx_data_clone(rdata,0,&param->data);
 
     pjsip_msg* msg = rdata->msg_info.msg;
     LOG(INFO) << "" << msg->line.req.method.id << " " << (char*)msg->line.req.method.name.ptr << " " ;
 
     if(msg->line.req.method.id == PJSIP_REGISTER_METHOD){
-        param->base = new SipRegister();
+        taskStart(std::make_shared<SipRegister>(),rdata);
     }
 
-    pthread_t pid;
-    int ret = EC::ECThread::createThread(SipCore::dealTaskThread,param,pid);
-
-
-    if(ret != 0)
-    {
-        LOG(ERROR)<<"create task thread error";
-        if(param)
-        {
-            delete param;
-            param = NULL;
-        }
-        return PJ_FALSE;
-    }
 
     return PJ_SUCCESS;
 }

@@ -46,12 +46,14 @@ bool GlobalCtl::init(std::shared_ptr<SipLocalConfig> param)
     if(!gThPool)
     {
         gThPool =  std::make_shared<ThreadPool>();
-        gThPool->createThreadPool(10);
+        gThPool->createThreadPool(1);
     }
 
 
     gSipServer = std::make_shared<SipCore>();
     gSipServer->InitSip(gConfig->sipPort());
+
+
 
     return true;
 }

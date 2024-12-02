@@ -1,0 +1,30 @@
+{
+    errdata = "In file included from \27[01m\27[Kcommon/SipTaskBase.h:2\27[m\27[K,\
+                 from \27[01m\27[Kdomain/sipRegister.h:2\27[m\27[K,\
+                 from \27[01m\27[Kdomain/sipRegister.cpp:1\27[m\27[K:\
+\27[01m\27[Kcommon/common.h:\27[m\27[K In member function ‘\27[01m\27[Kstd::string JsonParse::toString()\27[m\27[K’:\
+\27[01m\27[Kcommon/common.h:76:26:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[KISO C++ forbids converting a string constant to ‘\27[01m\27[Kchar*\27[m\27[K’ [\27[01;35m\27[K-Wwrite-strings\27[m\27[K]\
+   76 |             char* indent=\27[01;35m\27[K\"\"\27[m\27[K;\
+      |                          \27[01;35m\27[K^~\27[m\27[K\
+\27[01m\27[Kdomain/sipRegister.cpp:\27[m\27[K In member function ‘\27[01m\27[Kpj_status_t SipRegister::dealWithAuthorRegister(pjsip_rx_data*)\27[m\27[K’:\
+\27[01m\27[Kdomain/sipRegister.cpp:113:30:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[KISO C++ forbids converting a string constant to ‘\27[01m\27[Kchar*\27[m\27[K’ [\27[01;35m\27[K-Wwrite-strings\27[m\27[K]\
+  113 |         hdr->scheme = pj_str(\27[01;35m\27[K\"digest\"\27[m\27[K);\
+      |                              \27[01;35m\27[K^~~~~~~~\27[m\27[K\
+\27[01m\27[Kdomain/sipRegister.cpp:125:50:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[KISO C++ forbids converting a string constant to ‘\27[01m\27[Kchar*\27[m\27[K’ [\27[01;35m\27[K-Wwrite-strings\27[m\27[K]\
+  125 |         hdr->challenge.digest.algorithm = pj_str(\27[01;35m\27[K\"MD5\"\27[m\27[K);\
+      |                                                  \27[01;35m\27[K^~~~~\27[m\27[K\
+\27[01m\27[Kdomain/sipRegister.cpp:153:35:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[KISO C++ forbids converting a string constant to ‘\27[01m\27[Kchar*\27[m\27[K’ [\27[01;35m\27[K-Wwrite-strings\27[m\27[K]\
+  153 |             pj_str_t key = pj_str(\27[01;35m\27[K\"Date\"\27[m\27[K);\
+      |                                   \27[01;35m\27[K^~~~~~\27[m\27[K\
+\27[01m\27[Kdomain/sipRegister.cpp:\27[m\27[K In member function ‘\27[01m\27[Kpj_status_t SipRegister::dealWithRegister(pjsip_rx_data*)\27[m\27[K’:\
+\27[01m\27[Kdomain/sipRegister.cpp:230:27:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[KISO C++ forbids converting a string constant to ‘\27[01m\27[Kchar*\27[m\27[K’ [\27[01;35m\27[K-Wwrite-strings\27[m\27[K]\
+  230 |     pj_str_t key = pj_str(\27[01;35m\27[K\"Date\"\27[m\27[K);\
+      |                           \27[01;35m\27[K^~~~~~\27[m\27[K\
+\27[01m\27[Kdomain/sipRegister.cpp:\27[m\27[K In member function ‘\27[01m\27[Kpj_status_t SipRegister::dealWithAuthorRegister(pjsip_rx_data*)\27[m\27[K’:\
+\27[01m\27[Kdomain/sipRegister.cpp:193:1:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[Kcontrol reaches end of non-void function [\27[01;35m\27[K-Wreturn-type\27[m\27[K]\
+  193 | \27[01;35m\27[K}\27[m\27[K\
+      | \27[01;35m\27[K^\27[m\27[K\
+At global scope:\
+\27[01m\27[Kcc1plus:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[Kunrecognized command line option ‘\27[01m\27[K-Wno-gnu-line-marker\27[m\27[K’\
+"
+}

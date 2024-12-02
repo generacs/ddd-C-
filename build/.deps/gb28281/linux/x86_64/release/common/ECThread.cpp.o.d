@@ -1,6 +1,4 @@
 {
-    depfiles_gcc = "ECThread.o: common/ECThread.cpp common/ECThread.h\
-",
     files = {
         "common/ECThread.cpp"
     },
@@ -16,5 +14,7 @@
             "-I3rd/include",
             "-Iadapter"
         }
-    }
+    },
+    depfiles_gcc = "ECThread.o: common/ECThread.cpp common/ECThread.h\
+"
 }
