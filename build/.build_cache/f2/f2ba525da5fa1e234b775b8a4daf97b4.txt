@@ -1,0 +1,12 @@
+{
+    errdata = "In file included from \27[01m\27[Kcommon/SipTaskBase.h:2\27[m\27[K,\
+                 from \27[01m\27[Kdomain/sipRegister.h:2\27[m\27[K,\
+                 from \27[01m\27[Kdomain/sipRegister.cpp:1\27[m\27[K:\
+\27[01m\27[Kcommon/common.h:\27[m\27[K In member function ‘\27[01m\27[Kstd::string JsonParse::toString()\27[m\27[K’:\
+\27[01m\27[Kcommon/common.h:76:26:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[KISO C++ forbids converting a string constant to ‘\27[01m\27[Kchar*\27[m\27[K’ [\27[01;35m\27[K-Wwrite-strings\27[m\27[K]\
+   76 |             char* indent=\27[01;35m\27[K\"\"\27[m\27[K;\
+      |                          \27[01;35m\27[K^~\27[m\27[K\
+At global scope:\
+\27[01m\27[Kcc1plus:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[Kunrecognized command line option ‘\27[01m\27[K-Wno-gnu-line-marker\27[m\27[K’\
+"
+}

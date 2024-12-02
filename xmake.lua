@@ -11,12 +11,13 @@ pjsiplib = {"pjsua2-x86_64-unknown-linux-gnu", "pjsip-ua-x86_64-unknown-linux-gn
     "gsmcodec-x86_64-unknown-linux-gnu", "speex-x86_64-unknown-linux-gnu", "ilbccodec-x86_64-unknown-linux-gnu", "g7221codec-x86_64-unknown-linux-gnu",
     "yuv-x86_64-unknown-linux-gnu", "webrtc-x86_64-unknown-linux-gnu", "pj-x86_64-unknown-linux-gnu", "pjsdp-x86_64-unknown-linux-gnu", "asound"
 }
-elselib = { "glog", "gflags"
+elselib = { "glog", "gflags","tinyxml2", "tinyxml21"
 
 }
 
 programcpp = {"./domain/*.cpp", "./main/*.cpp","./application/*.cpp", "./common/*.cpp", "./adapter/*.cpp"}
 programhpp = {"./3rd/include/pjsip/","./application/", "./common/", "./domain/", "./3rd/include/", "./adapter/"}
+
 
 
 target("gb28281")

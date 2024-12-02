@@ -4,6 +4,8 @@
 #include <sipGbPlay.h>
 #include <thread>
 #include <globalCtl.h>
+#include <sipRegister.h>
+
 using namespace std;
 
 
@@ -24,14 +26,29 @@ static int pollingEvent(void* arg){
 }
 
 //应用层处理入口，处理接受响应
+//首先使用多线程的方式
+//还可以使用消息队列......
+
+
 pj_bool_t onRxRequest(pjsip_rx_data *rdata){
     if(NULL == rdata || NULL == rdata->msg_info.msg)
     {
         return PJ_FALSE;
     }
     threadParam* param = new threadParam();
+    pjsip_rx_data_clone(rdata,0,&param->data);
+
+    pjsip_msg* msg = rdata->msg_info.msg;
+    LOG(INFO) << "" << msg->line.req.method.id << " " << (char*)msg->line.req.method.name.ptr << " " ;
+
+    if(msg->line.req.method.id == PJSIP_REGISTER_METHOD){
+        param->base = new SipRegister();
+    }
+
     pthread_t pid;
     int ret = EC::ECThread::createThread(SipCore::dealTaskThread,param,pid);
+
+
     if(ret != 0)
     {
         LOG(ERROR)<<"create task thread error";
@@ -42,6 +59,7 @@ pj_bool_t onRxRequest(pjsip_rx_data *rdata){
         }
         return PJ_FALSE;
     }
+
     return PJ_SUCCESS;
 }
 
