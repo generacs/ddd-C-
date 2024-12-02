@@ -39,6 +39,8 @@ void test003(){
 		return;
 	}
 	LOG(INFO)<<GBOJ(gConfig)->localIp();
+
+    
 }
 
 
