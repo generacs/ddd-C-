@@ -6,6 +6,7 @@
 
 #include <sipLocalConfig.h>
 #include <globalCtl.h>
+#include <sipCatalog.h>
 
 void test001(){
     std::cout << "hello world" << std::endl;
@@ -40,7 +41,10 @@ void test003(){
 	}
 	LOG(INFO)<<GBOJ(gConfig)->localIp();
 
-    
+	std::this_thread::sleep_for(std::chrono::seconds(10));
+	
+	SipCatalog log;
+
 }
 
 

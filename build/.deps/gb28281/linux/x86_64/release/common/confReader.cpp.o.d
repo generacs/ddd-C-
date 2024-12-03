@@ -2,6 +2,8 @@
     files = {
         "common/confReader.cpp"
     },
+    depfiles_gcc = "confReader.o: common/confReader.cpp common/confReader.h\
+",
     values = {
         "/usr/bin/gcc",
         {
@@ -14,7 +16,5 @@
             "-I3rd/include",
             "-Iadapter"
         }
-    },
-    depfiles_gcc = "confReader.o: common/confReader.cpp common/confReader.h\
-"
+    }
 }
