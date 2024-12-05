@@ -1,0 +1,22 @@
+{
+    errdata = "In file included from \27[01m\27[Kdomain/SipTaskBase.h:2\27[m\27[K,\
+                 from \27[01m\27[Kdomain/sipCatalog.h:3\27[m\27[K,\
+                 from \27[01m\27[Kdomain/sipCatalog.cpp:1\27[m\27[K:\
+\27[01m\27[Kcommon/common.h:\27[m\27[K In member function ‘\27[01m\27[Kstd::string JsonParse::toString()\27[m\27[K’:\
+\27[01m\27[Kcommon/common.h:77:26:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[KISO C++ forbids converting a string constant to ‘\27[01m\27[Kchar*\27[m\27[K’ [\27[01;35m\27[K-Wwrite-strings\27[m\27[K]\
+   77 |             char* indent=\27[01;35m\27[K\"\"\27[m\27[K;\
+      |                          \27[01;35m\27[K^~\27[m\27[K\
+\27[01m\27[Kdomain/sipCatalog.cpp:\27[m\27[K In member function ‘\27[01m\27[Kvoid GetCatalog::DirectoryGetPro(void*)\27[m\27[K’:\
+\27[01m\27[Kdomain/sipCatalog.cpp:36:94:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[Knarrowing conversion of ‘\27[01m\27[Kmethod.std::__cxx11::basic_string<char>::length()\27[m\27[K’ from ‘\27[01m\27[Kstd::__cxx11::basic_string<char>::size_type\27[m\27[K’ {aka ‘\27[01m\27[Klong unsigned int\27[m\27[K’} to ‘\27[01m\27[Kpj_ssize_t\27[m\27[K’ {aka ‘\27[01m\27[Klong int\27[m\27[K’} [\27[01;35m\27[K-Wnarrowing\27[m\27[K]\
+   36 |             pjsip_method reqMethod = {PJSIP_OTHER_METHOD,{(char*)method.c_str(),\27[01;35m\27[Kmethod.length()\27[m\27[K}};\
+      |                                                                                 \27[01;35m\27[K~~~~~~~~~~~~~^~\27[m\27[K\
+\27[01m\27[Kdomain/sipCatalog.cpp:57:36:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[KISO C++ forbids converting a string constant to ‘\27[01m\27[Kchar*\27[m\27[K’ [\27[01;35m\27[K-Wwrite-strings\27[m\27[K]\
+   57 |             pj_str_t type = pj_str(\27[01;35m\27[K\"Application\"\27[m\27[K);\
+      |                                    \27[01;35m\27[K^~~~~~~~~~~~~\27[m\27[K\
+\27[01m\27[Kdomain/sipCatalog.cpp:58:39:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[KISO C++ forbids converting a string constant to ‘\27[01m\27[Kchar*\27[m\27[K’ [\27[01;35m\27[K-Wwrite-strings\27[m\27[K]\
+   58 |             pj_str_t subtype = pj_str(\27[01;35m\27[K\"MANSCDP+xml\"\27[m\27[K);\
+      |                                       \27[01;35m\27[K^~~~~~~~~~~~~\27[m\27[K\
+At global scope:\
+\27[01m\27[Kcc1plus:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[Kunrecognized command line option ‘\27[01m\27[K-Wno-gnu-line-marker\27[m\27[K’\
+"
+}
