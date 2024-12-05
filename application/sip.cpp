@@ -6,6 +6,7 @@
 #include <globalCtl.h>
 #include <sipRegister.h>
 #include <sipHeartBeat.h>
+#include <sipDirectory.h>
 #include <future>
 
 
@@ -36,6 +37,7 @@ static int pollingEvent(void* arg){
 static void taskStart(std::shared_ptr<SipTaskBase> base, pjsip_rx_data *rdata){
     if(!base)
     {
+        LOG(ERROR)<<"没有此业务";
         return;
     }
     std::async(std::launch::async, [&](){
@@ -54,7 +56,6 @@ pj_bool_t onRxRequest(pjsip_rx_data *rdata){
     }
 
     pjsip_msg* msg = rdata->msg_info.msg;
-    LOG(INFO) << "" << msg->line.req.method.id << " " << (char*)msg->line.req.method.name.ptr << " " ;
 
     if(msg->line.req.method.id == PJSIP_REGISTER_METHOD){
         taskStart(std::make_shared<SipRegister>(),rdata);
@@ -63,9 +64,16 @@ pj_bool_t onRxRequest(pjsip_rx_data *rdata){
         tinyxml2::XMLElement* root = SipTaskBase::parseXmlData(msg,rootType,cmdType,cmdValue);
         LOG(INFO)<<"rootType:"<<rootType;
         LOG(INFO)<<"cmdValue:"<<cmdValue;
+
         if(rootType == SIP_NOTIFY && cmdValue == SIP_HEARTBEAT)
         {
             taskStart(std::make_shared<SipHeartBeat>(),rdata);
+        }else if(rootType == SIP_RESPONSE){
+            std::cout << "ssssssssssssssssssssssssssssss" << std::endl;
+            if(cmdValue == SIP_CATALOG){
+            
+                taskStart(std::make_shared<SipDirectory>(root),rdata);
+            }
         }
     }
 

@@ -9,6 +9,7 @@ using namespace std;
 #define SIP_HEARTBEAT "keepalive"
 #define SIP_RESPONSE "Response"
 #define SIP_CATALOG "Catalog"
+#define SIP_QUERY "Query"
 #define SIP_RECORDINFO "RecordInfo"
 
 enum statusCode

@@ -1,6 +1,7 @@
 {
     files = {
         "build/.objs/gb28281/linux/x86_64/release/domain/sipCatalog.cpp.o",
+        "build/.objs/gb28281/linux/x86_64/release/domain/sipDirectory.cpp.o",
         "build/.objs/gb28281/linux/x86_64/release/domain/sipGbPaly.cpp.o",
         "build/.objs/gb28281/linux/x86_64/release/domain/sipHeartBeat.cpp.o",
         "build/.objs/gb28281/linux/x86_64/release/domain/sipRegister.cpp.o",
