@@ -5,6 +5,7 @@
         "build/.objs/gb28281/linux/x86_64/release/domain/sipGbPaly.cpp.o",
         "build/.objs/gb28281/linux/x86_64/release/domain/sipHeartBeat.cpp.o",
         "build/.objs/gb28281/linux/x86_64/release/domain/sipRegister.cpp.o",
+        "build/.objs/gb28281/linux/x86_64/release/domain/sipStream.cpp.o",
         "build/.objs/gb28281/linux/x86_64/release/domain/SipTaskBase.cpp.o",
         "build/.objs/gb28281/linux/x86_64/release/main/main.cpp.o",
         "build/.objs/gb28281/linux/x86_64/release/application/sip.cpp.o",
@@ -48,6 +49,9 @@
             "-lgflags",
             "-ltinyxml2",
             "-ltinyxml21",
+            "-lmpeg",
+            "-ljrtp",
+            "-ljthread",
             "-lpthread",
             "-g",
             "-no-pie"

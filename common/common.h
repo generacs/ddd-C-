@@ -15,6 +15,9 @@
 #include <memory>
 #include <sstream>
 #include <sys/sysinfo.h>
+
+#include "sipDef.h"
+
 using namespace std;
 
 #define LOG_DIR "/mnt/hgfs/share/log"

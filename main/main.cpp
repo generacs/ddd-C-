@@ -7,6 +7,8 @@
 #include <sipLocalConfig.h>
 #include <globalCtl.h>
 #include <sipCatalog.h>
+#include <sipStream.h>
+
 
 void test001(){
     std::cout << "hello world" << std::endl;
@@ -44,13 +46,20 @@ void test003(){
 	std::this_thread::sleep_for(std::chrono::seconds(10));
 	
 	SipCatalog log;
+	std::this_thread::sleep_for(std::chrono::seconds(10));
+
+	
+
 
 }
 
 
 int main(int argc, char** argv){
     test003();
-    
+
+	std::shared_ptr<OpenStream> gbStreamPtr = std::make_shared<OpenStream>();
+	gbStreamPtr->StreamServiceStart(); 
+	
     while (true)
     {
         std::this_thread::sleep_for(std::chrono::seconds(30));

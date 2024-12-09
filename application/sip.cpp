@@ -69,9 +69,7 @@ pj_bool_t onRxRequest(pjsip_rx_data *rdata){
         {
             taskStart(std::make_shared<SipHeartBeat>(),rdata);
         }else if(rootType == SIP_RESPONSE){
-            std::cout << "ssssssssssssssssssssssssssssss" << std::endl;
             if(cmdValue == SIP_CATALOG){
-            
                 taskStart(std::make_shared<SipDirectory>(root),rdata);
             }
         }

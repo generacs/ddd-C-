@@ -1,0 +1,61 @@
+{
+    errdata = "In file included from \27[01m\27[Kdomain/sipStream.h:4\27[m\27[K,\
+                 from \27[01m\27[Kdomain/sipStream.cpp:1\27[m\27[K:\
+\27[01m\27[Kcommon/common.h:\27[m\27[K In member function ‘\27[01m\27[Kstd::string JsonParse::toString()\27[m\27[K’:\
+\27[01m\27[Kcommon/common.h:80:26:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[KISO C++ forbids converting a string constant to ‘\27[01m\27[Kchar*\27[m\27[K’ [\27[01;35m\27[K-Wwrite-strings\27[m\27[K]\
+   80 |             char* indent=\27[01;35m\27[K\"\"\27[m\27[K;\
+      |                          \27[01;35m\27[K^~\27[m\27[K\
+In file included from \27[01m\27[Kdomain/sipStream.cpp:2\27[m\27[K:\
+\27[01m\27[Kdomain/sipGb28281Session.h:\27[m\27[K In member function ‘\27[01m\27[Kint Gb28181Session::CreateRtpSession(std::string, int)\27[m\27[K’:\
+\27[01m\27[Kdomain/sipGb28281Session.h:93:9:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[Kno return statement in function returning non-void [\27[01;35m\27[K-Wreturn-type\27[m\27[K]\
+   93 |         \27[01;35m\27[K}\27[m\27[K\
+      |         \27[01;35m\27[K^\27[m\27[K\
+\27[01m\27[Kdomain/sipGb28281Session.h:\27[m\27[K In member function ‘\27[01m\27[Kint Gb28181Session::RtpTcpInit(std::string, int, int)\27[m\27[K’:\
+\27[01m\27[Kdomain/sipGb28281Session.h:96:9:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[Kno return statement in function returning non-void [\27[01;35m\27[K-Wreturn-type\27[m\27[K]\
+   96 |         \27[01;35m\27[K}\27[m\27[K\
+      |         \27[01;35m\27[K^\27[m\27[K\
+\27[01m\27[Kdomain/sipGb28281Session.h:\27[m\27[K In member function ‘\27[01m\27[Kint Gb28181Session::SendPacket(int, char*, int, int)\27[m\27[K’:\
+\27[01m\27[Kdomain/sipGb28281Session.h:99:9:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[Kno return statement in function returning non-void [\27[01;35m\27[K-Wreturn-type\27[m\27[K]\
+   99 |         \27[01;35m\27[K}\27[m\27[K\
+      |         \27[01;35m\27[K^\27[m\27[K\
+\27[01m\27[Kdomain/sipStream.cpp:\27[m\27[K In static member function ‘\27[01m\27[Kstatic void OpenStream::StreamGetProc(void*)\27[m\27[K’:\
+\27[01m\27[Kdomain/sipStream.cpp:94:35:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[KISO C++ forbids converting a string constant to ‘\27[01m\27[Kchar*\27[m\27[K’ [\27[01;35m\27[K-Wwrite-strings\27[m\27[K]\
+   94 |     sdp->origin.net_type = pj_str(\27[01;35m\27[K\"IN\"\27[m\27[K);\
+      |                                   \27[01;35m\27[K^~~~\27[m\27[K\
+\27[01m\27[Kdomain/sipStream.cpp:95:36:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[KISO C++ forbids converting a string constant to ‘\27[01m\27[Kchar*\27[m\27[K’ [\27[01;35m\27[K-Wwrite-strings\27[m\27[K]\
+   95 |     sdp->origin.addr_type = pj_str(\27[01;35m\27[K\"IP4\"\27[m\27[K);\
+      |                                    \27[01;35m\27[K^~~~~\27[m\27[K\
+\27[01m\27[Kdomain/sipStream.cpp:101:34:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[KISO C++ forbids converting a string constant to ‘\27[01m\27[Kchar*\27[m\27[K’ [\27[01;35m\27[K-Wwrite-strings\27[m\27[K]\
+  101 |     sdp->conn->net_type = pj_str(\27[01;35m\27[K\"IN\"\27[m\27[K);\
+      |                                  \27[01;35m\27[K^~~~\27[m\27[K\
+\27[01m\27[Kdomain/sipStream.cpp:102:35:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[KISO C++ forbids converting a string constant to ‘\27[01m\27[Kchar*\27[m\27[K’ [\27[01;35m\27[K-Wwrite-strings\27[m\27[K]\
+  102 |     sdp->conn->addr_type = pj_str(\27[01;35m\27[K\"IP4\"\27[m\27[K);\
+      |                                   \27[01;35m\27[K^~~~~\27[m\27[K\
+\27[01m\27[Kdomain/sipStream.cpp:111:28:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[KISO C++ forbids converting a string constant to ‘\27[01m\27[Kchar*\27[m\27[K’ [\27[01;35m\27[K-Wwrite-strings\27[m\27[K]\
+  111 |     m->desc.media = pj_str(\27[01;35m\27[K\"video\"\27[m\27[K);\
+      |                            \27[01;35m\27[K^~~~~~~\27[m\27[K\
+\27[01m\27[Kdomain/sipStream.cpp:116:36:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[KISO C++ forbids converting a string constant to ‘\27[01m\27[Kchar*\27[m\27[K’ [\27[01;35m\27[K-Wwrite-strings\27[m\27[K]\
+  116 |         m->desc.transport = pj_str(\27[01;35m\27[K\"TCP/RTP/AVP\"\27[m\27[K);\
+      |                                    \27[01;35m\27[K^~~~~~~~~~~~~\27[m\27[K\
+\27[01m\27[Kdomain/sipStream.cpp:120:36:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[KISO C++ forbids converting a string constant to ‘\27[01m\27[Kchar*\27[m\27[K’ [\27[01;35m\27[K-Wwrite-strings\27[m\27[K]\
+  120 |         m->desc.transport = pj_str(\27[01;35m\27[K\"RTP/AVP\"\27[m\27[K);\
+      |                                    \27[01;35m\27[K^~~~~~~~~\27[m\27[K\
+\27[01m\27[Kdomain/sipStream.cpp:123:29:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[KISO C++ forbids converting a string constant to ‘\27[01m\27[Kchar*\27[m\27[K’ [\27[01;35m\27[K-Wwrite-strings\27[m\27[K]\
+  123 |     m->desc.fmt[0] = pj_str(\27[01;35m\27[K\"96\"\27[m\27[K);\
+      |                             \27[01;35m\27[K^~~~\27[m\27[K\
+\27[01m\27[Kdomain/sipStream.cpp:131:25:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[KISO C++ forbids converting a string constant to ‘\27[01m\27[Kchar*\27[m\27[K’ [\27[01;35m\27[K-Wwrite-strings\27[m\27[K]\
+  131 |     attr->name = pj_str(\27[01;35m\27[K\"rtpmap\"\27[m\27[K);\
+      |                         \27[01;35m\27[K^~~~~~~~\27[m\27[K\
+\27[01m\27[Kdomain/sipStream.cpp:136:25:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[KISO C++ forbids converting a string constant to ‘\27[01m\27[Kchar*\27[m\27[K’ [\27[01;35m\27[K-Wwrite-strings\27[m\27[K]\
+  136 |     attr->name = pj_str(\27[01;35m\27[K\"recvonly\"\27[m\27[K);\
+      |                         \27[01;35m\27[K^~~~~~~~~~\27[m\27[K\
+\27[01m\27[Kdomain/sipStream.cpp:141:29:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[KISO C++ forbids converting a string constant to ‘\27[01m\27[Kchar*\27[m\27[K’ [\27[01;35m\27[K-Wwrite-strings\27[m\27[K]\
+  141 |         attr->name = pj_str(\27[01;35m\27[K\"setup\"\27[m\27[K);\
+      |                             \27[01;35m\27[K^~~~~~~\27[m\27[K\
+\27[01m\27[Kdomain/sipStream.cpp:168:35:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[KISO C++ forbids converting a string constant to ‘\27[01m\27[Kchar*\27[m\27[K’ [\27[01;35m\27[K-Wwrite-strings\27[m\27[K]\
+  168 |     pj_str_t subjectName = pj_str(\27[01;35m\27[K\"Subject\"\27[m\27[K);\
+      |                                   \27[01;35m\27[K^~~~~~~~~\27[m\27[K\
+At global scope:\
+\27[01m\27[Kcc1plus:\27[m\27[K \27[01;35m\27[Kwarning: \27[m\27[Kunrecognized command line option ‘\27[01m\27[K-Wno-gnu-line-marker\27[m\27[K’\
+"
+}

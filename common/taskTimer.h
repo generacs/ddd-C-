@@ -2,8 +2,10 @@
 
 #include <unistd.h>
 #include <sys/time.h>
+#include <functional>
 
-typedef void (*timerCallBack)(void* param);
+// typedef void (*timerCallBack)(void* param);
+using timerCallBack = std::function<void(void*)>;
 class TaskTimer
 {
     public:

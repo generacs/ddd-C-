@@ -14,7 +14,10 @@
             "-Icommon",
             "-Idomain",
             "-I3rd/include",
-            "-Iadapter"
+            "-Iadapter",
+            "-I3rd/include/jrtplib3",
+            "-I3rd/include/mpege",
+            "-I3rd/include/jthread"
         }
     }
 }
