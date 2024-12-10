@@ -90,7 +90,6 @@ class Gb28181Session : public RTPSession,public Session
 
         int CreateRtpSession(string dstip,int dstport){
             LOG(INFO) << "CreateRtpSession";
-            RTPSession rtpSession;
             RTPSessionParams sessParams;
             sessParams.SetOwnTimestampUnit(1.0/90000.0);
             sessParams.SetAcceptOwnPackets(true);
@@ -105,7 +104,7 @@ class Gb28181Session : public RTPSession,public Session
                 transparams.SetRTPReceiveBuffer(1024*1024);
                 transparams.SetPortbase(2000);
                 
-                ret = rtpSession.Create(sessParams,&transparams);
+                ret = Create(sessParams,&transparams);
                 // ret = Create(sessParams,&transparams);
                 LOG(INFO)<<"ret:"<<ret;
                 if(ret < 0)

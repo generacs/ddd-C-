@@ -13,13 +13,15 @@
 void test001(){
     std::cout << "hello world" << std::endl;
 
-    std::unique_ptr<SipCore> sipPtr = std::make_unique<SipCore>();
+    // std::unique_ptr<SipCore> sipPtr = std::make_unique<SipCore>();
+	std::unique_ptr<SipCore> sipPtr(new SipCore);
     sipPtr->InitSip(10086);
 
 }
 void test002(){
-    std::unique_ptr<SipLocalConfig> config = std::make_unique<SipLocalConfig>();
-    int ret = config->ReadConf();
+    // std::unique_ptr<SipLocalConfig> config = std::make_unique<SipLocalConfig>();
+    std::unique_ptr<SipLocalConfig> config(new SipLocalConfig);
+	int ret = config->ReadConf();
     if(ret == -1)
 	{
 		LOG(ERROR)<<"read config error";

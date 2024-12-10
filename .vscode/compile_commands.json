@@ -1,0 +1,86 @@
+[
+{
+  "directory": "/home/liu/src/ddd/ddd-C-",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-std=c++11", "-I3rd/include/pjsip", "-Iapplication", "-Icommon", "-Idomain", "-I3rd/include", "-Iadapter", "-I3rd/include/jrtplib3", "-I3rd/include/mpege", "-I3rd/include/jthread", "-D_GLIBCXX_USE_CXX11_ABI=0", "-o", "build/.objs/gb28281/linux/x86_64/release/domain/sipDirectory.cpp.o", "domain/sipDirectory.cpp"],
+  "file": "domain/sipDirectory.cpp"
+},
+{
+  "directory": "/home/liu/src/ddd/ddd-C-",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-std=c++11", "-I3rd/include/pjsip", "-Iapplication", "-Icommon", "-Idomain", "-I3rd/include", "-Iadapter", "-I3rd/include/jrtplib3", "-I3rd/include/mpege", "-I3rd/include/jthread", "-D_GLIBCXX_USE_CXX11_ABI=0", "-o", "build/.objs/gb28281/linux/x86_64/release/domain/sipCatalog.cpp.o", "domain/sipCatalog.cpp"],
+  "file": "domain/sipCatalog.cpp"
+},
+{
+  "directory": "/home/liu/src/ddd/ddd-C-",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-std=c++11", "-I3rd/include/pjsip", "-Iapplication", "-Icommon", "-Idomain", "-I3rd/include", "-Iadapter", "-I3rd/include/jrtplib3", "-I3rd/include/mpege", "-I3rd/include/jthread", "-D_GLIBCXX_USE_CXX11_ABI=0", "-o", "build/.objs/gb28281/linux/x86_64/release/domain/SipTaskBase.cpp.o", "domain/SipTaskBase.cpp"],
+  "file": "domain/SipTaskBase.cpp"
+},
+{
+  "directory": "/home/liu/src/ddd/ddd-C-",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-std=c++11", "-I3rd/include/pjsip", "-Iapplication", "-Icommon", "-Idomain", "-I3rd/include", "-Iadapter", "-I3rd/include/jrtplib3", "-I3rd/include/mpege", "-I3rd/include/jthread", "-D_GLIBCXX_USE_CXX11_ABI=0", "-o", "build/.objs/gb28281/linux/x86_64/release/domain/sipHeartBeat.cpp.o", "domain/sipHeartBeat.cpp"],
+  "file": "domain/sipHeartBeat.cpp"
+},
+{
+  "directory": "/home/liu/src/ddd/ddd-C-",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-std=c++11", "-I3rd/include/pjsip", "-Iapplication", "-Icommon", "-Idomain", "-I3rd/include", "-Iadapter", "-I3rd/include/jrtplib3", "-I3rd/include/mpege", "-I3rd/include/jthread", "-D_GLIBCXX_USE_CXX11_ABI=0", "-o", "build/.objs/gb28281/linux/x86_64/release/domain/sipGbPaly.cpp.o", "domain/sipGbPaly.cpp"],
+  "file": "domain/sipGbPaly.cpp"
+},
+{
+  "directory": "/home/liu/src/ddd/ddd-C-",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-std=c++11", "-I3rd/include/pjsip", "-Iapplication", "-Icommon", "-Idomain", "-I3rd/include", "-Iadapter", "-I3rd/include/jrtplib3", "-I3rd/include/mpege", "-I3rd/include/jthread", "-D_GLIBCXX_USE_CXX11_ABI=0", "-o", "build/.objs/gb28281/linux/x86_64/release/domain/sipStream.cpp.o", "domain/sipStream.cpp"],
+  "file": "domain/sipStream.cpp"
+},
+{
+  "directory": "/home/liu/src/ddd/ddd-C-",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-std=c++11", "-I3rd/include/pjsip", "-Iapplication", "-Icommon", "-Idomain", "-I3rd/include", "-Iadapter", "-I3rd/include/jrtplib3", "-I3rd/include/mpege", "-I3rd/include/jthread", "-D_GLIBCXX_USE_CXX11_ABI=0", "-o", "build/.objs/gb28281/linux/x86_64/release/domain/sipRegister.cpp.o", "domain/sipRegister.cpp"],
+  "file": "domain/sipRegister.cpp"
+},
+{
+  "directory": "/home/liu/src/ddd/ddd-C-",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-std=c++11", "-I3rd/include/pjsip", "-Iapplication", "-Icommon", "-Idomain", "-I3rd/include", "-Iadapter", "-I3rd/include/jrtplib3", "-I3rd/include/mpege", "-I3rd/include/jthread", "-D_GLIBCXX_USE_CXX11_ABI=0", "-o", "build/.objs/gb28281/linux/x86_64/release/main/main.cpp.o", "main/main.cpp"],
+  "file": "main/main.cpp"
+},
+{
+  "directory": "/home/liu/src/ddd/ddd-C-",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-std=c++11", "-I3rd/include/pjsip", "-Iapplication", "-Icommon", "-Idomain", "-I3rd/include", "-Iadapter", "-I3rd/include/jrtplib3", "-I3rd/include/mpege", "-I3rd/include/jthread", "-D_GLIBCXX_USE_CXX11_ABI=0", "-o", "build/.objs/gb28281/linux/x86_64/release/application/sipLocalConfig.cpp.o", "application/sipLocalConfig.cpp"],
+  "file": "application/sipLocalConfig.cpp"
+},
+{
+  "directory": "/home/liu/src/ddd/ddd-C-",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-std=c++11", "-I3rd/include/pjsip", "-Iapplication", "-Icommon", "-Idomain", "-I3rd/include", "-Iadapter", "-I3rd/include/jrtplib3", "-I3rd/include/mpege", "-I3rd/include/jthread", "-D_GLIBCXX_USE_CXX11_ABI=0", "-o", "build/.objs/gb28281/linux/x86_64/release/application/sip.cpp.o", "application/sip.cpp"],
+  "file": "application/sip.cpp"
+},
+{
+  "directory": "/home/liu/src/ddd/ddd-C-",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-std=c++11", "-I3rd/include/pjsip", "-Iapplication", "-Icommon", "-Idomain", "-I3rd/include", "-Iadapter", "-I3rd/include/jrtplib3", "-I3rd/include/mpege", "-I3rd/include/jthread", "-D_GLIBCXX_USE_CXX11_ABI=0", "-o", "build/.objs/gb28281/linux/x86_64/release/common/ECThread.cpp.o", "common/ECThread.cpp"],
+  "file": "common/ECThread.cpp"
+},
+{
+  "directory": "/home/liu/src/ddd/ddd-C-",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-std=c++11", "-I3rd/include/pjsip", "-Iapplication", "-Icommon", "-Idomain", "-I3rd/include", "-Iadapter", "-I3rd/include/jrtplib3", "-I3rd/include/mpege", "-I3rd/include/jthread", "-D_GLIBCXX_USE_CXX11_ABI=0", "-o", "build/.objs/gb28281/linux/x86_64/release/common/confReader.cpp.o", "common/confReader.cpp"],
+  "file": "common/confReader.cpp"
+},
+{
+  "directory": "/home/liu/src/ddd/ddd-C-",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-std=c++11", "-I3rd/include/pjsip", "-Iapplication", "-Icommon", "-Idomain", "-I3rd/include", "-Iadapter", "-I3rd/include/jrtplib3", "-I3rd/include/mpege", "-I3rd/include/jthread", "-D_GLIBCXX_USE_CXX11_ABI=0", "-o", "build/.objs/gb28281/linux/x86_64/release/common/taskTimer.cpp.o", "common/taskTimer.cpp"],
+  "file": "common/taskTimer.cpp"
+},
+{
+  "directory": "/home/liu/src/ddd/ddd-C-",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-std=c++11", "-I3rd/include/pjsip", "-Iapplication", "-Icommon", "-Idomain", "-I3rd/include", "-Iadapter", "-I3rd/include/jrtplib3", "-I3rd/include/mpege", "-I3rd/include/jthread", "-D_GLIBCXX_USE_CXX11_ABI=0", "-o", "build/.objs/gb28281/linux/x86_64/release/common/ThreadPool.cpp.o", "common/ThreadPool.cpp"],
+  "file": "common/ThreadPool.cpp"
+},
+{
+  "directory": "/home/liu/src/ddd/ddd-C-",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-std=c++11", "-I3rd/include/pjsip", "-Iapplication", "-Icommon", "-Idomain", "-I3rd/include", "-Iadapter", "-I3rd/include/jrtplib3", "-I3rd/include/mpege", "-I3rd/include/jthread", "-D_GLIBCXX_USE_CXX11_ABI=0", "-o", "build/.objs/gb28281/linux/x86_64/release/common/XmlParser.cpp.o", "common/XmlParser.cpp"],
+  "file": "common/XmlParser.cpp"
+},
+{
+  "directory": "/home/liu/src/ddd/ddd-C-",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-std=c++11", "-I3rd/include/pjsip", "-Iapplication", "-Icommon", "-Idomain", "-I3rd/include", "-Iadapter", "-I3rd/include/jrtplib3", "-I3rd/include/mpege", "-I3rd/include/jthread", "-D_GLIBCXX_USE_CXX11_ABI=0", "-o", "build/.objs/gb28281/linux/x86_64/release/common/sipMessage.cpp.o", "common/sipMessage.cpp"],
+  "file": "common/sipMessage.cpp"
+},
+{
+  "directory": "/home/liu/src/ddd/ddd-C-",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-std=c++11", "-I3rd/include/pjsip", "-Iapplication", "-Icommon", "-Idomain", "-I3rd/include", "-Iadapter", "-I3rd/include/jrtplib3", "-I3rd/include/mpege", "-I3rd/include/jthread", "-D_GLIBCXX_USE_CXX11_ABI=0", "-o", "build/.objs/gb28281/linux/x86_64/release/adapter/globalCtl.cpp.o", "adapter/globalCtl.cpp"],
+  "file": "adapter/globalCtl.cpp"
+}]

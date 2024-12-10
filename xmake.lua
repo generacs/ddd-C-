@@ -1,7 +1,7 @@
 set_project("gb28281")
 
 add_rules("mode.debug")
-set_languages("c++14")
+set_languages("c++11")
 
 
 pjsiplib = {"pjsua2-x86_64-unknown-linux-gnu", "pjsip-ua-x86_64-unknown-linux-gnu", "pjsua-x86_64-unknown-linux-gnu", 
@@ -28,3 +28,4 @@ target("gb28281")
     add_links(pjsiplib, elselib)
     add_syslinks("pthread")
     add_ldflags("-g","-no-pie")
+    add_defines("_GLIBCXX_USE_CXX11_ABI=0")
