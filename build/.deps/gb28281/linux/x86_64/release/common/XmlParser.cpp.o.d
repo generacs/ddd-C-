@@ -1,9 +1,4 @@
 {
-    depfiles_gcc = "XmlParser.o: common/XmlParser.cpp common/XmlParser.h\
-",
-    files = {
-        "common/XmlParser.cpp"
-    },
     values = {
         "/usr/bin/gcc",
         {
@@ -19,5 +14,10 @@
             "-I3rd/include/mpege",
             "-I3rd/include/jthread"
         }
+    },
+    depfiles_gcc = "XmlParser.o: common/XmlParser.cpp common/XmlParser.h\
+",
+    files = {
+        "common/XmlParser.cpp"
     }
 }

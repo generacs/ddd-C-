@@ -90,6 +90,7 @@ class Gb28181Session : public RTPSession,public Session
 
         int CreateRtpSession(string dstip,int dstport){
             LOG(INFO) << "CreateRtpSession";
+            RTPSession rtpSession;
             RTPSessionParams sessParams;
             sessParams.SetOwnTimestampUnit(1.0/90000.0);
             sessParams.SetAcceptOwnPackets(true);
@@ -97,14 +98,15 @@ class Gb28181Session : public RTPSession,public Session
             sessParams.SetNeedThreadSafety(true);
             sessParams.SetMinimumRTCPTransmissionInterval(RTPTime(5,0));
             int ret = -1;
-            if(protocal == 0)
+            if(1)
             {
+
                 RTPUDPv4TransmissionParams transparams;
                 transparams.SetRTPReceiveBuffer(1024*1024);
-                transparams.SetPortbase(rtp_loaclport);
+                transparams.SetPortbase(2000);
                 
-
-                ret = Create(sessParams,&transparams);
+                ret = rtpSession.Create(sessParams,&transparams);
+                // ret = Create(sessParams,&transparams);
                 LOG(INFO)<<"ret:"<<ret;
                 if(ret < 0)
                 {
@@ -122,7 +124,7 @@ class Gb28181Session : public RTPSession,public Session
                 ret = Create(sessParams, &transParams, RTPTransmitter::TCPProto);
                 if(ret < 0)
                 {
-                    LOG(ERROR) << "Rtp tcp error: " << RTPGetErrorString(ret);
+                    // LOG(ERROR) << "Rtp tcp error: " << RTPGetErrorString(ret);
                     return -1;
                 }
 
@@ -168,7 +170,40 @@ class Gb28181Session : public RTPSession,public Session
         }
         void OnNewSource(RTPSourceData *srcdat)
         {
-           LOG(INFO) << "OnNewSource";
+           			LOG(INFO)<<"OnNewSource";
+			LOG(INFO)<<"srcdat->IsOwnSSRC():"<<srcdat->IsOwnSSRC();
+            if(srcdat->IsOwnSSRC())
+                return;
+            
+            uint32_t ip;
+            uint16_t port;
+			LOG(INFO)<<"00";
+            if(srcdat->GetRTPDataAddress() != 0)
+            {
+				LOG(INFO)<<"11";
+                const RTPIPv4Address* addr = (const RTPIPv4Address*)srcdat->GetRTPDataAddress();
+                ip = addr->GetIP();
+                port = addr->GetPort();
+            }
+            else if(srcdat->GetRTCPDataAddress() != 0)
+            {
+				LOG(INFO)<<"22";
+                const RTPIPv4Address* addr = (const RTPIPv4Address*)srcdat->GetRTCPDataAddress();
+                ip = addr->GetIP();
+                port = addr->GetPort()-1;
+            }
+            else
+			{
+				LOG(INFO)<<"33";
+				return;
+			}
+                
+            
+            RTPIPv4Address dest(ip,port);
+            AddDestination(dest);
+            struct in_addr inaddr;
+            inaddr.s_addr = htonl(ip);
+            LOG(INFO)<<"Adding destination "<<string(inet_ntoa(inaddr))<<":"<<port;
         }
 
         void OnRemoveSource(RTPSourceData *srcdat)

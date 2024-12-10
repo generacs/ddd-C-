@@ -52,6 +52,9 @@
             "-lmpeg",
             "-ljrtp",
             "-ljthread",
+            "-lstdc++",
+            "-levent_pthreads",
+            "-levent",
             "-lpthread",
             "-g",
             "-no-pie"

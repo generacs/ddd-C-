@@ -211,6 +211,7 @@ bool SipCore::InitSip(int sipPort)
             break;
         }
 
+
         pjsip_inv_callback inv_cb;
         pj_bzero(&inv_cb,sizeof(inv_cb));
         inv_cb.on_state_changed = &SipGbPlay::OnStateChanged;
@@ -218,6 +219,8 @@ bool SipCore::InitSip(int sipPort)
         inv_cb.on_media_update = &SipGbPlay::OnMediaUpdate;
         inv_cb.on_send_ack = &SipGbPlay::OnSendAck;
         status = pjsip_inv_usage_init(m_endpt,&inv_cb);
+
+
         if(PJ_SUCCESS != status)
         {
             LOG(ERROR)<<"register invite module faild,code:"<<status;

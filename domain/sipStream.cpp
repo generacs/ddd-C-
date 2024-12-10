@@ -178,13 +178,13 @@ void OpenStream::StreamGetProc(void* param){
         return;
     }
 
-    AutoMutexLock lck(&(GlobalCtl::gStreamLock));
+    // AutoMutexLock lck(&(GlobalCtl::gStreamLock));
 
-    // LOG(INFO) <<pSession->PrintSession();
-    GlobalCtl::glistSession.push_back(pSession);
-    GlobalCtl::gRcvIpc = false;
-	sleep(3);
-	OpenStream::StreamStop("11000000002000000001","11000000001310000059");
+    // // LOG(INFO) <<pSession->PrintSession();
+    // GlobalCtl::glistSession.push_back(pSession);
+    // GlobalCtl::gRcvIpc = false;
+	// sleep(3);
+	// OpenStream::StreamStop("11000000002000000001","11000000001310000059");
     return;
 
 
