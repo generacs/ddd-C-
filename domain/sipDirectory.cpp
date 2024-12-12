@@ -15,10 +15,9 @@ SipDirectory::~SipDirectory()
 
 pj_status_t SipDirectory::run(pjsip_rx_data *rdata)
 {
-    std::cout << "ssssssssssssssssssssssssssssssssssssssss" << std::endl;
     int status_code = SIP_SUCCESS;
     //解析message-body-xml数据
-    SaveDir(status_code);
+    // SaveDir(status_code);
     //响应
     pj_status_t status = pjsip_endpt_respond(GBOJ(gSipServer)->GetEndPoint(),NULL,rdata,status_code,NULL,NULL,NULL,NULL);
     if(PJ_SUCCESS != status)
@@ -64,7 +63,6 @@ void SipDirectory::SaveDir(int& status_code)
     pElement = pRootElement->FirstChildElement("DeviceList");
     if(pElement)
     {
-        std::cout << "fffffffffffffffffffffffffffffff" << std::endl;
         tinyxml2::XMLElement* pItem = pElement->FirstChildElement("item");
         while(pItem)
         {

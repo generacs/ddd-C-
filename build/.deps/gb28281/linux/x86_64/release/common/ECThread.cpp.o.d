@@ -1,9 +1,4 @@
 {
-    files = {
-        "common/ECThread.cpp"
-    },
-    depfiles_gcc = "ECThread.o: common/ECThread.cpp common/ECThread.h\
-",
     values = {
         "/usr/bin/gcc",
         {
@@ -20,5 +15,10 @@
             "-I3rd/include/jthread",
             "-D_GLIBCXX_USE_CXX11_ABI=0"
         }
+    },
+    depfiles_gcc = "ECThread.o: common/ECThread.cpp common/ECThread.h\
+",
+    files = {
+        "common/ECThread.cpp"
     }
 }

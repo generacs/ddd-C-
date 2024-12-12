@@ -1,21 +1,21 @@
 {
     files = {
-        "build/.objs/gb28281/linux/x86_64/release/domain/sipDirectory.cpp.o",
         "build/.objs/gb28281/linux/x86_64/release/domain/sipCatalog.cpp.o",
-        "build/.objs/gb28281/linux/x86_64/release/domain/SipTaskBase.cpp.o",
-        "build/.objs/gb28281/linux/x86_64/release/domain/sipHeartBeat.cpp.o",
+        "build/.objs/gb28281/linux/x86_64/release/domain/sipDirectory.cpp.o",
         "build/.objs/gb28281/linux/x86_64/release/domain/sipGbPaly.cpp.o",
-        "build/.objs/gb28281/linux/x86_64/release/domain/sipStream.cpp.o",
+        "build/.objs/gb28281/linux/x86_64/release/domain/sipHeartBeat.cpp.o",
         "build/.objs/gb28281/linux/x86_64/release/domain/sipRegister.cpp.o",
+        "build/.objs/gb28281/linux/x86_64/release/domain/sipStream.cpp.o",
+        "build/.objs/gb28281/linux/x86_64/release/domain/SipTaskBase.cpp.o",
         "build/.objs/gb28281/linux/x86_64/release/main/main.cpp.o",
-        "build/.objs/gb28281/linux/x86_64/release/application/sipLocalConfig.cpp.o",
         "build/.objs/gb28281/linux/x86_64/release/application/sip.cpp.o",
-        "build/.objs/gb28281/linux/x86_64/release/common/ECThread.cpp.o",
+        "build/.objs/gb28281/linux/x86_64/release/application/sipLocalConfig.cpp.o",
         "build/.objs/gb28281/linux/x86_64/release/common/confReader.cpp.o",
+        "build/.objs/gb28281/linux/x86_64/release/common/ECThread.cpp.o",
+        "build/.objs/gb28281/linux/x86_64/release/common/sipMessage.cpp.o",
         "build/.objs/gb28281/linux/x86_64/release/common/taskTimer.cpp.o",
         "build/.objs/gb28281/linux/x86_64/release/common/ThreadPool.cpp.o",
         "build/.objs/gb28281/linux/x86_64/release/common/XmlParser.cpp.o",
-        "build/.objs/gb28281/linux/x86_64/release/common/sipMessage.cpp.o",
         "build/.objs/gb28281/linux/x86_64/release/adapter/globalCtl.cpp.o"
     },
     values = {

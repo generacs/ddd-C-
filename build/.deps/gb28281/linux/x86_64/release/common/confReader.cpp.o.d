@@ -1,9 +1,4 @@
 {
-    files = {
-        "common/confReader.cpp"
-    },
-    depfiles_gcc = "confReader.o: common/confReader.cpp common/confReader.h\
-",
     values = {
         "/usr/bin/gcc",
         {
@@ -20,5 +15,10 @@
             "-I3rd/include/jthread",
             "-D_GLIBCXX_USE_CXX11_ABI=0"
         }
-    }
+    },
+    files = {
+        "common/confReader.cpp"
+    },
+    depfiles_gcc = "confReader.o: common/confReader.cpp common/confReader.h\
+"
 }

@@ -1,9 +1,4 @@
 {
-    files = {
-        "common/XmlParser.cpp"
-    },
-    depfiles_gcc = "XmlParser.o: common/XmlParser.cpp common/XmlParser.h\
-",
     values = {
         "/usr/bin/gcc",
         {
@@ -20,5 +15,10 @@
             "-I3rd/include/jthread",
             "-D_GLIBCXX_USE_CXX11_ABI=0"
         }
+    },
+    depfiles_gcc = "XmlParser.o: common/XmlParser.cpp common/XmlParser.h\
+",
+    files = {
+        "common/XmlParser.cpp"
     }
 }
